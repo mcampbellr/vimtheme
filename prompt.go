@@ -1,10 +1,6 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/manifoldco/promptui"
-)
+import "github.com/manifoldco/promptui"
 
 type theme struct {
 	ThemeName string
@@ -34,7 +30,6 @@ func selectTheme() (*theme, error) {
 	_, result, err := prompt.Run()
 
 	if err != nil {
-		fmt.Printf("Prompt failed %v\n", err)
 		return nil, err
 	}
 
