@@ -10,9 +10,10 @@ type theme struct {
 
 var items = []*theme{
 	{ThemeName: "Monokai", Theme: "monokai", Line: "molokai"},
-	{ThemeName: "Dracula", Theme: "dracula", Line: "dracula"},
+	{ThemeName: "NeoSolarized", Theme: "NeoSolarized", Line: "solarized_dark"},
+	{ThemeName: "One Dark", Theme: "onedark", Line: "onedark"},
+	{ThemeName: "Dracula", Theme: "dracula", Line: "onedark"},
 	{ThemeName: "Gruvbox", Theme: "gruvbox", Line: "gruvbox_dark"},
-	{ThemeName: "Neo Solarized", Theme: "NeoSolarized", Line: "solarized_dark"},
 }
 
 func selectTheme() (*theme, error) {
