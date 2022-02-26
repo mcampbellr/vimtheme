@@ -9,11 +9,9 @@ type theme struct {
 }
 
 var items = []*theme{
-	{ThemeName: "Monokai", Theme: "monokai", Line: "molokai"},
-	{ThemeName: "NeoSolarized", Theme: "NeoSolarized", Line: "solarized_dark"},
-	{ThemeName: "One Dark", Theme: "onedark", Line: "onedark"},
-	{ThemeName: "Dracula", Theme: "dracula", Line: "onedark"},
-	{ThemeName: "Gruvbox", Theme: "gruvbox", Line: "gruvbox_dark"},
+	{ThemeName: "Monokai", Theme: "monokai"},
+	{ThemeName: "NeoSolarized", Theme: "NeoSolarized"},
+	{ThemeName: "One Dark", Theme: "onedark"},
 }
 
 func selectTheme() (*theme, error) {
@@ -24,7 +22,7 @@ func selectTheme() (*theme, error) {
 	}
 
 	prompt := promptui.Select{
-		Label: "Select Theme:",
+		Label: "Select NeoVim Theme:",
 		Items: selectItems,
 	}
 

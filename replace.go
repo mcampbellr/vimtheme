@@ -10,8 +10,8 @@ import (
 )
 
 func SearchAndReplace(search string, replaceStr string, fileName string, debug bool) error {
-	dotenv := os.Getenv("DOTFILES")
-	path := filepath.Join(dotenv, fileName)
+	home := os.Getenv("HOME")
+	path := filepath.Join(home, fileName)
 
 	file, err := os.ReadFile(path)
 
@@ -21,6 +21,7 @@ func SearchAndReplace(search string, replaceStr string, fileName string, debug b
 
 	out := string(file)
 	re := regexp.MustCompile(search)
+
 	newContent := []byte(re.ReplaceAllString(out, replaceStr))
 
 	if debug {

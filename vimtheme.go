@@ -18,11 +18,6 @@ func main() {
 
 	mainSearch := `colorscheme\s[a-zA-Z_]+`
 	mainReplace := "colorscheme " + selectedTheme.Theme
-	mainFileName := "nvim/init.vim"
+	mainFileName := ".config/nvim/lua/user/colorscheme.lua"
 	SearchAndReplace(mainSearch, mainReplace, mainFileName, false)
-
-	lineSearch := `theme\=\s'[a-zA-Z_]+'`
-	lineReplace := "theme= '" + selectedTheme.Line + "'"
-	lineFileName := "nvim/after/plugin/lualine.lua"
-	SearchAndReplace(lineSearch, lineReplace, lineFileName, false)
 }
